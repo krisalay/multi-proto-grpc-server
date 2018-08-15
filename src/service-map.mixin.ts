@@ -1,3 +1,5 @@
+import { IGrpcOptions } from './interfaces';
+
 type Constructor<T = {}> = new (...args: any[]) => T;
 
 class GrpcServiceMap {
