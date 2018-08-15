@@ -60,7 +60,7 @@ message Response_Notification {
 ```
 #### index.js
 ```
-const { GRPC, ServiceMap } = require('grpc-server');
+const { GRPC, ServiceMap } = require('multi-proto-grpc-server');
 
 const serviceContainer = {
   send: (res) => {
