@@ -1,0 +1,10 @@
+.tscache
+dist/
+lib/
+node_modules/
+*.txt
+*.proto
+package-lock.json
+grpc-client.js
+test-server.js
+.npmignore

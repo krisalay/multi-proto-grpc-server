@@ -1,0 +1,33 @@
+{
+  "name": "multi-proto-grpc-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node ./test-server.js",
+    "build": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krisalay/multi-proto-grpc-server.git"
+  },
+  "keywords": [
+    "gRPC",
+    "RPC",
+    "grpc",
+    "rpc"
+  ],
+  "author": "krisalay <krisalay.kumar@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.3.0",
+    "grpc": "^1.12.4"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-ts": "^6.0.0-beta.21",
+    "typescript": "^3.0.1"
+  }
+}
