@@ -18,7 +18,7 @@ npm start
 ```npm install multi-proto-grpc-server```
 
 ## Example
-####notification.proto
+#### notification.proto
 
 ```
 syntax = "proto3";
@@ -39,7 +39,7 @@ message Response_Notification {
 }
 ```
 
-####notification.proto
+#### notification.proto
 ```
 syntax = "proto3";
 
@@ -85,6 +85,20 @@ new GRPC([
 ]).run('0.0.0.0:50051');
 ```
 
+### Docs
+#### ServiceMap(package-name, service-container)
+> package-name: It is same name of the package as in proto file
+> service-container: It is the key value pair of user defined function. Key is the name of the rpc functions.
+
+#### GRPC([Array of objects])
+> Array of objects contains three fields: serviceName, PROTO_PATH, serviceMap.
+> serviceName is the name of the service as in thr proto file.> 
+> PROTO_PATH is the path of the proto file
+serviceMap is the map object of the ServiceMap Class
+
 ## Upcoming Features
 - Authentication
 - grpc-client (sdk for client)
+
+## Contributors
+Looking for developers who can contribute to this open source project. Contact me to enroll yourself as a contributors.
