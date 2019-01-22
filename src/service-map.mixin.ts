@@ -12,8 +12,7 @@ class GrpcServiceMap {
     this.serviceContainer = serviceContainer;
     Object.keys(serviceContainer).forEach(key => {
       this.map[key] = async (call, callback) => {
-        const response = await serviceContainer[key](call.request);
-        callback(null, response);
+        const response = await serviceContainer[key](call, callback);
       }
     });
   }

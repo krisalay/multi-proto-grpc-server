@@ -63,16 +63,16 @@ message Response_Notification {
 const { GRPC, ServiceMap } = require('multi-proto-grpc-server');
 
 const serviceContainer = {
-  send: (res) => {
+  send: (call, callback) => {
   // - - - <code> - - -
-    return { response: 'Response' };
+    callback(null, 'some result');
   }
 }
 
 const serviceContainer1 = {
-  send1: (res) => {
+  send1: (call, callback) => {
     // - - - <code> - - -
-    return { response: 'Response1' };
+    callback(null, 'some result');
   }
 }
 

@@ -8,3 +8,4 @@ package-lock.json
 grpc-client.js
 test-server.js
 .npmignore
+test.ts
