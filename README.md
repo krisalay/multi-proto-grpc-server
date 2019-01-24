@@ -80,8 +80,8 @@ const notificationServiceMap = new ServiceMap('notification', serviceContainer);
 const notificationServiceMap1 = new ServiceMap('notification', serviceContainer1);
 
 new GRPC([
-  { serviceName: 'Notification', PROTO_PATH: './notification.proto', serviceMap: notificationServiceMap.map },
-  { serviceName: 'Notification', PROTO_PATH: './notification1.proto', serviceMap: notificationServiceMap1.map }
+  { packageName: 'notification', serviceName: 'Notification', PROTO_PATH: './notification.proto', serviceMap: notificationServiceMap.map },
+  { packageName: 'notification1', serviceName: 'Notification', PROTO_PATH: './notification1.proto', serviceMap: notificationServiceMap1.map }
 ]).run('0.0.0.0:50051');
 ```
 

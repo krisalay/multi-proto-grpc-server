@@ -3,6 +3,7 @@ import * as protoLoader from '@grpc/proto-loader';
 import { ServiceMap } from './service-map.mixin';
 
 interface INewGrpcObject {
+  packageName: string;
   serviceName: string;
   PROTO_PATH: string;
   serviceMap: any
@@ -30,8 +31,8 @@ export class GRPC {
         defaults: true,
         oneofs: true
        });
-      const protoDescription: grpc.PackageDefinition = grpc.loadPackageDefinition(packageDefinition);
-      const packageDetail: protoLoader.ServiceDefinition = protoDescription[object.serviceName.toLowerCase()];
+      const protoDescription: any = grpc.loadPackageDefinition(packageDefinition);
+      const packageDetail: protoLoader.ServiceDefinition = protoDescription[object.packageName];
       this.definitionContainer.push({ 
         packageDefinition, 
         protoDescription, 
